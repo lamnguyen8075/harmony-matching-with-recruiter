@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sanchez', serif;
+  }
+  
+  .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../images/home-back1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* NAV TAG: Places nav list on upper righthand corner of the homepage */
+  nav{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* NAV TAG: Places nav list on upper righthand corner of the homepage */
+  nav img{
+    width: 150px;
+  }
+  
+  /* NAV-LINKS div: Right-aligns the nav list*/
+  .nav-links{
+    flex: 1;
+    text-align: right;
+  }
+  
+  /* NAV-LINKS div: Lines up the list horizontally and removes bulletpoints*/
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  /* NAV-LINKS div: Formats the nav list*/
+  .nav-links ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+  
+  }
+  
+  /* NAV-LINKS div: Adds hover effect to nav list items: UNHOVERED*/
+  .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FFF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  /* NAV-LINKS div: Adds hover effect to nav list items: HOVERED*/
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  
+  /* TEXT-BOX div: Sets font format and position*/
+  .text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    /* Good: 65 / 65 */
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* TEXT-BOX div: Sets header format*/
+  .text-box h1{
+    font-size: 72px;
+  }
+  
+  /* TEXT-BOX div: Sets paragraph format*/
+  .text-box p{
+    margin: 10px 0 40px;
+    font-size: #fff;
+  }
+  
