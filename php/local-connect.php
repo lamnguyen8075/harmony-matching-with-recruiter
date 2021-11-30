@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "cmpe133-harmony";
+$database = "harmony-db";
 $username = "root";
 $password = "";
 // Create connection

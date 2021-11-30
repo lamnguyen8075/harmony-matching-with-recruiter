@@ -15,7 +15,8 @@
         <th>Company</th>
         <th>Position</th>
         <th>Status</th>
-        <th>Date</th>
+        <th
+        >Date</th>
         <th></th>
     </tr>
     <tr>
@@ -38,13 +39,14 @@
 </form>
 
 <div class="cards">
-    <?php
+    <?php 
     include 'php/process.php';
 
+    // print_r($applications);
+    // foreach($applications as $application): 
 
     if($countCardManuallyAdded){
         while($rowCardManuallyAdded = mysqli_fetch_assoc($resultCardManuallyAdded)){
-
 
 
             echo "<div class='card'>";
@@ -68,15 +70,45 @@
             echo "       <td> Date</td>";
             echo "       <td style='width:60%,text-align:left;'>".$rowCardManuallyAdded['date']."</td>";
             echo "    </tr>";
+            echo "   <tr>";
+            echo "       <td> ID</td>";
+            echo "       <td style='width:60%,text-align:left;'>".$rowCardManuallyAdded['applicationid']."</td>";
+            echo "    </tr>";
             echo "</table>";
             echo "</div>";
             echo "<div class='card__info'>";
             echo "<button type='submit'>Edit</button>";
+            echo "<form  method='post'>";
+            echo "<button type='detail' name='$rowCardManuallyAdded[applicationid]' value>Detail</button>";
+            echo "</form>";
             echo "</div>";
             echo "</div>";
+            
         }
+
+
+
         mysqli_free_result($resultCardManuallyAdded);
     }  
+
+    $sql = "SELECT * FROM application";
+    $result = mysqli_query($conn, $sql);
+    $count = mysqli_fetch_row($result)[0];
+    $applications = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $rowcount = mysqli_num_rows( $result );
+
+    for ($x = 1; $x <= $rowcount; $x++) {
+        if (isset($_POST[$x])) {
+            session_start();
+            $_SESSION["applicationid"] = $x;
+            
+            header("Location: detail.php");
+ 
+            exit();
+            
+        }
+    }
+
     ?>
 </div>
 
