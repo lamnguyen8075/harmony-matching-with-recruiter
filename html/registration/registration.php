@@ -1,15 +1,15 @@
-<html>
-<head>
-    <link rel="stylesheet" href="registrationPG.css">
+<!-- <html> -->
+<!-- <head> -->
+    <!-- <link rel="stylesheet" href="registrationPG.css"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <title>Registration Page</title>
-</head>
+    <!-- <title>Registration Page</title> -->
+<!-- </head> -->
 
-<body>
-    <div>
+<!-- <body> -->
+    <!-- <div>
         <div class="center"> 
             <h1 class="bank-title">Harmony Registration Page</h1>
-        </div>
+        </div> -->
         <?php 
         if (isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["repassword"]) && isset($_POST["role"]) && isset($_POST["phone"])){
             if ($_POST["first_name"] && $_POST["last_name"] && $_POST["password"] && $_POST["repassword"] && $_POST["email"] && $_POST["role"] && $_POST["phone"]) {
@@ -36,17 +36,6 @@
 
                     $results = mysqli_query($conn, $sql);
                     
-                    // this line accepts string values with apostrophies (ex: John's Bank Account)
-                    // $updatedNameOfAccount = mysqli_real_escape_string($conn, $nameOfAccount);
-
-                    // if($results) {
-                    //     // open up new bank account if registration is successful
-                    //     $sql = "INSERT INTO accounts (username, accountType, accountName) VALUES     
-                    //     ('$username', '$accountType', '$updatedNameOfAccount')";
-
-                    //     $results1 = mysqli_query($conn, $sql);
-                    // }
-                    
                     if ($results) { 
                         echo "<script>
                             alert('SUCCESS! Your account has been successfully created.');
@@ -68,8 +57,8 @@
             echo '<div class = "instructions">Register Here</div>';
         } 
         ?>
-    </div>
-    <form action="registration.php" method="post">
+    <!-- </div> -->
+    <!-- <form action="registration.php" method="post">
         <section>   
             <div>
                 <label for="first_name">First Name: </label>
@@ -102,7 +91,6 @@
                     <option value="student">student</option>
                     <option value="recruiter">recruiter</option>
                 </select>
-                <!-- <input type = "text" placeholder="Choose your role: " name = "role" required> -->
             </div>
             <div>
                 <label for="phone">Phone number: </label>
@@ -110,30 +98,14 @@
             </div>
         </section>
 
-        <!-- <section>
-            <div class='inputbox'>
-                <label for="accountType">Select an Account Type:</label>
-                <select id="accountType" name="accountType" required>
-                    <option value="Checking">Checkings Account</option>
-                    <option value="Savings">Savings Account</option>
-                    <option value="College Savings">College Student Account</option>
-                </select>
-            </div>
-            <div class='inputbox'>
-                <label for="nameOfAccount">Name of the Account: </label>
-                <input type = "text" placeholder="Enter an Account Name" name = "nameOfAccount" required>
-            </div>
-        </section> -->
-
         <div>
             <input type ="submit" value ="Submit Registration">
-            <!-- <button class="btn"><a href="success.html">Success Page</a></button> -->
         </div>
-    </form>
+    </form> -->
 
-    <div class="center">
+    <!-- <div class="center">
         <h3>Did you want to login instead? Click the button below.</h3>
-        <button class="btn"><a href="success.html">Success Page</a></button>
+        <button class="btn"><a href="login.php">Login Page</a></button>
     </div>
 </body>
-</html>
+</html> -->
