@@ -18,8 +18,8 @@
           <li><a href="">HOME</a></li>
           <li><a href="dashboard.php">DASHBOARD</a></li>
           <li><a href="">ABOUT</a></li>
-          <li><a href="">LOGIN</a></li>
-          <li><a href="">SIGNUP</a></li>
+          <li><a href="./html/registration-signin.html">LOGIN/REGISTER</a></li>
+          <!-- <li><a href="">SIGNUP</a></li> -->
         </ul>
       </div>
     </nav>
