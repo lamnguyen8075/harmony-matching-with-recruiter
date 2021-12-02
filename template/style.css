@@ -1,139 +1,136 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+header{
+  height: 8vh;
+  width: 100%;
+  background-image: url(../images/home-back1.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+
+.content{
+  width: 85%;
+  background-color: transparent;
+  padding-top: 100px;
+  padding-bottom: 15vh;
+  margin:auto;
+  text-align: justify;
+ 
+}
+
+.content p{
+  padding-bottom: 2%;
+}
+
+
+footer{
+  position: static;
+  background-color: #000;
+  width: 100%;
+  height: 15vh;
+  bottom: 0;
+  text-align: center;
   
-  header{
-    height: 8vh;
-    width: 100%;
-    background-image: url(../images/home-back1.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-  }
+}
 
+footer h2{
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .content{
-    width: 85%;
-    background-color: transparent;
-    padding-top: 100px;
-    padding-bottom: 15vh;
-    margin:auto;
-    text-align: justify;
-   
-  }
+footer ul li{
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-  .content p{
-    padding-bottom: 2%;
-  }
+/* NAV TAG: Places nav list on upper righthand corner of the homepage */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* NAV TAG: Places nav list on upper righthand corner of the homepage */
+nav img{
+  width: 150px;
+}
 
-  footer{
-    position: static;
-    background-color: #000;
-    width: 100%;
-    height: 15vh;
-    bottom: 0;
-    text-align: center;
-  }
+.logo {
+  font-family: 'Sanchez', serif;
+  font-size: 26px;
+  padding-left: 3%;
+  padding-top: 0vh;
+  color: #fff;
+  letter-spacing: 1pt;
 
-  footer h2{
+  text-shadow:
+    -1px -1px 0 #87908e,
+    1px -1px 0 #87908e,
+    -1px 1px 0 #87908e,
+    1px 1px 0 #87908e;  
+  
+}
+/* NAV-LINKS div: Right-aligns the nav list*/
+.nav-links{
+  padding-top: 17px;
+  padding-right: 4%;
+  flex: 1;
+  text-align: right;
+}
+
+/* NAV-LINKS div: Lines up the list horizontally and removes bulletpoints*/
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 0px 12pt;
+  position: relative;
+}
+
+/* NAV-LINKS div: Formats the nav list*/
+.nav-links ul li a{
     color: #fff;
     text-decoration: none;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
-  }
+    font-weight: bold;
 
-  footer ul li{
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    
-  }
-  
-  /* NAV TAG: Places nav list on upper righthand corner of the homepage */
-  nav{
-    display: flex;
-    padding: 1% 4%;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* NAV TAG: Places nav list on upper righthand corner of the homepage */
-  nav img{
-    width: 150px;
-  }
-  
-  /* NAV-LINKS div: Right-aligns the nav list*/
-  .nav-links{
-    flex: 1;
-    text-align: right;
-  }
-  
-  /* NAV-LINKS div: Lines up the list horizontally and removes bulletpoints*/
-  .nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-  }
-  
-  /* NAV-LINKS div: Formats the nav list*/
-  .nav-links ul li a{
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: bold;
-  
-  }
-  
-  /* NAV-LINKS div: Adds hover effect to nav list items: UNHOVERED*/
-  .nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #FFF;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-  
-  /* NAV-LINKS div: Adds hover effect to nav list items: HOVERED*/
-  .nav-links ul li:hover::after{
-    width: 100%;
-  }
-  
-  /* TEXT-BOX div: Sets font format and position*/
-  .text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    /* Good: 65 / 65 */
-    top: 60%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* TEXT-BOX div: Sets header format*/
-  .text-box h1{
-    font-size: 72px;
-  }
-  
-  /* TEXT-BOX div: Sets paragraph format*/
-  .text-box p{
-    margin: 10px 0 40px;
-    font-size: #fff;
-  }
+}
 
-  footer {
-    background-color: #111;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-  
+/* NAV-LINKS div: Adds hover effect to nav list items: UNHOVERED*/
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #FFF;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+/* NAV-LINKS div: Adds hover effect to nav list items: HOVERED*/
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+
+footer {
+  background-color: #111;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+footer h2{
+  padding-top: 10pt;
+}
