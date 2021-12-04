@@ -61,17 +61,15 @@
                           <h5 id='card-role' class='header text-center'>$row[role]</h5>
                           <h6 class='card-subtitle mb-2'>Status: $row[status]</h5>
                           <h4>Company: $row[company] </h4>
+                          <a href='$row[job_link]' target='_blank' class='card-link'>Job Description link</a>
                           </div>
                           <div class='card-footer'>Date Applied: $row[date_applied]</div>
                       </div>";
                 }
               }
-            } 
-            else {
+            } else {
               echo "
-                      <div class='alert alert-success' role='alert'>
-                        You do not have any job applications tracked!
-                      </div>
+                      <h1> NO applications </h1>
                    ";
             }
           ?>

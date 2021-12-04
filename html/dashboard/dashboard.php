@@ -95,6 +95,10 @@
               <label class="inputLabel">Date</label>
               <input type="text" class="form-control" name="date_applied" aria-describedby="emailHelp" required>
             </div>
+            <div class="inputBox">
+              <label class="inputLabel">Job Link</label>
+              <input type="text" class="form-control" name="job_link" aria-describedby="emailHelp" required>
+            </div>
               <button type="submit" id="addAccountSubmitBtn" class="btn btn-primary">Submit</button>
           </form>
         </div>
