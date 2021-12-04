@@ -5,7 +5,7 @@
     <header>    
         <link rel="stylesheet" href="login.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        <title>Testing Page</title>  
+        <title>Login/Registration</title>  
     </header>  
     <body class= "background-color"> 
         <div class="grid-container">
@@ -44,7 +44,7 @@
                                         if ($row["password"] === $password && $row["email"] === $email) {          
                                             $logged_in = true;  
                                             $_SESSION['email'] = $email;
-                                            header('Location: success.html');      
+                                            header('Location: ../dashboard/dashboard.php');      
                                         } else {          
                                             echo '<div class="alert alert-danger">
                                                 <strong>Failed!</strong> Password or email is incorrect. Please try again!

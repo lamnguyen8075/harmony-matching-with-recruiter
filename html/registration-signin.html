@@ -5,7 +5,7 @@
         <title>Testing Page</title>  
     </header>  
 
-<h2>Sign in / Sign up to Harmony </h2>
+<h2>Sign in / Register to Harmony </h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="registration/registration.php" method="post">
@@ -15,14 +15,17 @@
                 <input id="last-name" type="text" placeholder="Last Name" name="last_name"/>
             </div>
 			<input type="email" placeholder="Email" name="email" />
-			<input id="first-password" type="password" placeholder="Password" name="password" />
-			<input id="last-password" type="password" placeholder="Re-enter Password" name="repassword" />
+			<div id="selector">
+				<input id="first-password" type="password" placeholder="Password" name="password" />
+				<input id="last-password" type="password" placeholder="Re-enter Password" name="repassword" />
+			</div>
 			<input type="text" placeholder="Phone Number: " name="phone" />
 			<select id="select-role" name="role" required>
+				<option value="" disabled selected>Select your role: </option>
 				<option value="student">student</option>
 				<option value="recruiter">recruiter</option>
 			</select>
-			<button id="sign-up-button" type="submit">Sign Up</button>
+			<button id="sign-up-button" type="submit">Register</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -43,7 +46,7 @@
 			<div class="overlay-panel overlay-right">
 				<h1>Hello, Friend!</h1>
 				<p>Enter your personal details and log in</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<button class="ghost" id="signUp">Register</button>
 			</div>
 		</div>
 	</div>
