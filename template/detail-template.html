@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="with=device-width, initial-scale=1.0">
-  <title>Edit Profile</title>
+  <title>Track Application</title>
   <link rel="stylesheet" href="../template/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,43 +30,43 @@
 <body>
   <!-- CONTENT -->  
   <div class="content">
-    <div class="edit-profile-container">
-        <div class="title">Edit Profile</div>
+    <div class="track-application-container">
+        <div class="title">Track Application</div>
         <form action="#">
             <div class="user-info">
                 <div class="input-box">
-                    <span class="info">First name</span>
-                    <input type="text" placeholder="Enter your first name" required>
+                    <span class="info">Company</span>
+                    <input type="text" placeholder="Enter Company Name" required>
                 </div>
 
                 <div class="input-box">
-                    <span class="info">Last name</span>
-                    <input type="text" placeholder="Enter your last name" required>
+                    <span class="info">Position</span>
+                    <input type="text" placeholder="Enter Position" required>
                 </div>
 
-                <div class="input-box">
-                    <span class="info">Email</span>
-                    <input type="text" placeholder="Enter your email" required>
-                </div>
+                
                 
                 <div class="input-box">
-                    <span class="info">Role</span>
-                    <select name="role">
-                        <option value="applicant">Applicant</option>
-                        <option value="recruiter">Recruiter</option>
+                    <span class="info">Status</span>
+                    <select name="status">
+                        <option value="applied">Applied</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="accepted">Accepted</option>
                     </select>
                 </div> 
-                 
+                
+               
             </div>
 
             
-
-            <div class="resume-box">
-                <span class="info">Resume</span>
-                <input type="file" name="upload" accept="resume/pdf"/>
+            <div class="notes-box">
+              <span class="info">Notes</span>
+              <textarea rows = "5" cols = "60" name = "description" placeholder="Enter details here..."></textarea>
             </div>
+            
             <div class="button">
-                <input type="submit" value="Save">
+                <input type="submit" value="Track">
                 <input type="submit" value="Cancel">
             </div>
         </form>

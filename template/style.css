@@ -124,16 +124,7 @@ nav img{
 }
 
 
-footer {
-  background-color: #111;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
 
-footer h2{
-  padding-top: 10pt;
-}
 
 body{
   justify-content: center;
@@ -147,11 +138,11 @@ body{
   justify-content: center;
   align-items: center;
   padding: 10px;
-  
   background-color: whitesmoke;
 }
 
-.content .editcontainer{
+/* EDIT PROFILE SECTION */
+.content .edit-profile-container{
   padding: 35px 30px;
   margin-top: 5%;
   box-sizing: border-box;
@@ -162,7 +153,7 @@ body{
   box-shadow: 0px 3px 8px 1px #969696;
 }
 
-.content .editcontainer .title{
+.content .edit-profile-container .title{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -170,7 +161,7 @@ body{
 }
 
 
-.content .editcontainer form .user-info{
+.content .edit-profile-container form .user-info{
   display: block;
   text-align: left;
   padding-left: 20% ;
@@ -182,9 +173,6 @@ form .user-info .input-box{
   width: 95%;
   margin: 20px 0 12px 0;
   align-items: center;
-  
- 
- 
 }
 .user-info .input-box input{
   height: 40px;
@@ -196,8 +184,6 @@ form .user-info .input-box{
 
   
 }
-
-
 
 .user-info .input-box .info{
   display: block;
@@ -215,11 +201,7 @@ form .user-info .input-box{
   
 }
 
-
-
-
-
-.content .editcontainer .resume-box{
+.content .edit-profile-container .resume-box{
   width: 95%;
   margin: 12px 0 12px 0;
   align-items: center;
@@ -227,14 +209,14 @@ form .user-info .input-box{
   padding-left: 20%;
 }
 
-.content .editcontainer .resume-box .info{
+.content .edit-profile-container .resume-box .info{
   display: block;
   font-weight: 500;
   margin-bottom: 5px;  
   
 }
 
-.content .editcontainer .button{
+.content .edit-profile-container .button{
   margin-top: 8%;
   margin-bottom: 5px;
   padding-left: 30%;
@@ -260,3 +242,98 @@ form .button input{
 form .button input:hover{
   background: #2c534b;
 }
+
+
+
+
+
+
+/* TRACK APPLICATION SECTION */
+.content .track-application-container{
+  padding: 25px 30px;
+  margin-top: 5%;
+  box-sizing: border-box;
+  width: 80%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 8px 1px #969696;
+  
+  
+}
+
+.content .track-application-container .title{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.content .track-application-container form .user-info .input-box{
+  width: 55%;
+  margin: 20px 0 12px 0;
+  align-items: center;
+}
+
+.content .track-application-container form .user-info{
+  display: block;
+  text-align: left;
+  padding-left: 1% ;
+  align-items: center;
+}
+
+.content .track-application-container .notes-box{
+  width: 95%;
+  margin: 12px 0 12px 0;
+  align-items: center;
+  display: block;
+  padding-left: 1%;
+}
+
+.content .track-application-container .notes-box textarea{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 1%;
+  width: 97%;
+  height: 100%;
+}
+
+.content .track-application-container .notes-box .info{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;  
+  
+}
+
+.content .track-application-container .button{
+  margin-top: 2%;
+  margin-bottom: 5px;
+  padding-right: 5%;
+  
+}
+
+.content .track-application-container form .button input{
+  height: 100%;
+  width: 20%;
+  background-color: #2e7e6c;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  color: white;
+  
+}
+
+.content .track-application-container form .button input:hover{
+  background: #2c534b;
+}
+
+
+footer {
+  background-color: #111;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+footer h2{
+  padding-top: 10pt;
+}
+
