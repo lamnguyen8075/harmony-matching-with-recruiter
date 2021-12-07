@@ -134,3 +134,129 @@ footer {
 footer h2{
   padding-top: 10pt;
 }
+
+body{
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  
+}
+.content{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+  background-color: whitesmoke;
+}
+
+.content .editcontainer{
+  padding: 35px 30px;
+  margin-top: 5%;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 8px 1px #969696;
+}
+
+.content .editcontainer .title{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+
+.content .editcontainer form .user-info{
+  display: block;
+  text-align: left;
+  padding-left: 20% ;
+  align-items: center;
+  
+  
+}
+form .user-info .input-box{
+  width: 95%;
+  margin: 20px 0 12px 0;
+  align-items: center;
+  
+ 
+ 
+}
+.user-info .input-box input{
+  height: 40px;
+  width: 80%;
+  padding-left: 2%;
+  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+  
+}
+
+
+
+.user-info .input-box .info{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;  
+}
+
+.user-info .input-box select{
+  height: 40px;
+  width: 82.5%;
+  padding-left: 2%;
+  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  
+}
+
+
+
+
+
+.content .editcontainer .resume-box{
+  width: 95%;
+  margin: 12px 0 12px 0;
+  align-items: center;
+  display: block;
+  padding-left: 20%;
+}
+
+.content .editcontainer .resume-box .info{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;  
+  
+}
+
+.content .editcontainer .button{
+  margin-top: 8%;
+  margin-bottom: 5px;
+  padding-left: 30%;
+  
+}
+
+form .button{
+  height: 45px;
+  margin: 45px 0;
+  
+  
+}
+
+form .button input{
+  height: 100%;
+  width: 30%;
+  background-color: #2e7e6c;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  color: white;
+}
+
+form .button input:hover{
+  background: #2c534b;
+}
