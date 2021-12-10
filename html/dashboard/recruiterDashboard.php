@@ -56,7 +56,7 @@
     ?> 
 
     <!-- Displays cards contained with all of the user's job applications-->
-    <?php include 'jobPostingCards.php'; ?>
+    <?php include '../cards/jobPostingCards.php'; ?>
 
     <!-- Modal for Add Account-->
     <div class="modal fade" id="addApplicationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,7 +70,7 @@
           </div>
     
           <!-- Forms -->
-          <form action="addJobPosting.php" method="post">
+          <form action="../functions/addJobPosting.php" method="post">
             <div class="inputBox">
               <label class="inputLabel">Role</label>
               <input type="text" class="form-control" name="role" aria-describedby="emailHelp" placeholder="Sofware Engineer, Front-end Engineer, etc." required>
@@ -113,7 +113,7 @@
           </div>
     
           <!-- Forms -->
-        <form action="editPosting.php" method="post">
+        <form action="../functions/editPosting.php" method="post">
         <!-- Dropdown for user's tracked applications -->
 
             <div class="inputBox">
@@ -157,7 +157,7 @@
 
             <div id="edit-buttons">
               <button type="submit" id="submitAppBtn" class="btn btn-primary" name="submit">Submit</button>
-              <button type="submit" id="deleteAppBtn" class="btn btn-danger" formaction="deletePosting.php" formmethod="POST">Delete</button>
+              <button type="submit" id="deleteAppBtn" class="btn btn-danger" formaction="../functions/deletePosting.php" formmethod="POST">Delete</button>
             </div>
 
         </form>

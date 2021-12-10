@@ -4,9 +4,10 @@
 ?>
         
 <?php
-    if (isset($_POST["application_id"])) {
-        if ($_POST["application_id"]) {
+    if (isset($_POST["application_id"]) && isset($_POST["status"])) {
+        if ($_POST["application_id"] && $_POST["status"]) {
 
+            $status = $_POST["status"];
             $application_id = $_POST["application_id"];
             
             // gets session email variable from login page
@@ -20,11 +21,11 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "DELETE FROM job_postings WHERE application_id='$application_id'";
+            $sql = "UPDATE applications SET status='$status' WHERE application_id='$application_id'";
             $results = mysqli_query($conn, $sql);
             echo "<script>
-                alert('You have successfully deleted your application');
-                window.location.href='recruiterDashboard.php';
+                alert('You have successfully edited your application');
+                window.location.href='../dashboard/dashboard.php';
                 </script>";
 
             // close connection
@@ -33,7 +34,7 @@
         } else {
             echo "<script>
                     alert('Please enter a valid account name');
-                    window.location.href='recruiterDashboard.php';
+                    window.location.href='../dashboard/dashboard.php';
                     </script>";
         }
     } else {

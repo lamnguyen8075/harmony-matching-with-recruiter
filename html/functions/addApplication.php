@@ -23,25 +23,18 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-
-            // pull all of user's accounts
-            // $pullAccounts = "SELECT * FROM accounts WHERE active = 1 && username = \"" . $_SESSION['username'] . "\"";
-            // $accounts = mysqli_query($conn, $pullAccounts);
-            // $rowCount=mysqli_num_rows($accounts);
-
-            // checks if the user has created 5 accounts already
-            // if ($rowCount < 5) {
+            
                 // add account
                 $updatedRole = mysqli_real_escape_string($conn, $role);
                 $updatedCompany = mysqli_real_escape_string($conn, $company);
                 $updatedDate = mysqli_real_escape_string($conn, $date_applied);
                 $updatedURL = mysqli_real_escape_string($conn, $job_link);
 
-                $sql = "INSERT INTO job_postings (email, role, company, status, date_applied, job_link) VALUES ('$email', '$updatedRole', '$updatedCompany', '$status', '$updatedDate', '$updatedURL')";
+                $sql = "INSERT INTO applications (email, role, company, status, date_applied, job_link) VALUES ('$email', '$updatedRole', '$updatedCompany', '$status', '$updatedDate', '$updatedURL')";
                 $results = mysqli_query($conn, $sql);
                 echo "<script>
                     alert('You have successfully saved an application');
-                    window.location.href='recruiterDashboard.php';
+                    window.location.href='../dashboard/dashboard.php';
                     </script>";
             // } else {
             //     echo "<script>
@@ -57,7 +50,7 @@
         } else {
             echo "<script>
                     alert('Please enter a valid account name');
-                    window.location.href='dashboard.php';
+                    window.location.href='../dashboard/dashboard.php';
                     </script>";
         }
     } else {

@@ -11,9 +11,6 @@
 
   </head>
   <body>
-    <!-- Displays cards contained with all of the user's account information -->
-    <!-- SQL Query to pad user balance -->
-    <!-- ALTER TABLE `accounts` CHANGE `balance` `balance` DECIMAL(10, 2) NOT NULL DEFAULT '0';  -->
     <div class="container"> 
       <div class="row"> 
           <?php
@@ -22,7 +19,7 @@
             {
                 die("Connection Failed: " . mysqli_connect_error());
             }
-            $query = "SELECT * FROM job_postings";
+            $query = "SELECT * FROM applications WHERE email = \"" . $_SESSION['email'] . "\"";
             $results = mysqli_query($conn, $query);
 
             function function_alert($message) {
@@ -35,7 +32,7 @@
             {
               while($row = $results->fetch_assoc())
               {
-                if($row['status'] == "Open") {
+                if($row['status'] == "Offer") {
                   echo "<div class='card text-white bg-success m-3' style='max-width: 20rem;'>
                           <div class='card-body'>
                           <h5 id='card-role' class='header text-center'>$row[role]</h5>
@@ -46,8 +43,19 @@
                           <div class='card-footer'>Date Applied: $row[date_applied]</div>
                       </div>";
                 }
-                if($row['status'] == "Closed") {
+                if($row['status'] == "Rejected" || $row['status'] == "Withdraw") {
                   echo "<div class='card text-white bg-danger m-3' style='max-width: 20rem;'>
+                          <div class='card-body'>
+                          <h5 id='card-role' class='header text-center'>$row[role]</h5>
+                          <h6 class='card-subtitle mb-2'>Status: $row[status]</h5>
+                          <h4>Company: $row[company] </h4>
+                          <a href='$row[job_link]' target='_blank' class='card-link'>Job Description link</a>
+                          </div>
+                          <div class='card-footer'>Date Applied: $row[date_applied]</div>
+                      </div>";
+                }
+                if($row['status'] == "Applied" || $row['status'] == "Review" || $row['status'] == "Interview")  {
+                  echo "<div class='card text-white bg-warning m-3' style='max-width: 20rem;'>
                           <div class='card-body'>
                           <h5 id='card-role' class='header text-center'>$row[role]</h5>
                           <h6 class='card-subtitle mb-2'>Status: $row[status]</h5>
