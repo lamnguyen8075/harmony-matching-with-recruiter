@@ -36,7 +36,7 @@
     <h1 class='display-4' id='welcome-message'>Job Marketplace</h1>
 
     <!-- Displays cards contained with all of the user's job applications-->
-    <?php include 'marketplaceCards.php'; ?>
+    <?php include '../cards/marketplaceCards.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>

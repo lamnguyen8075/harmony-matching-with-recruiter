@@ -11,9 +11,6 @@
 
   </head>
   <body>
-    <!-- Displays cards contained with all of the user's account information -->
-    <!-- SQL Query to pad user balance -->
-    <!-- ALTER TABLE `accounts` CHANGE `balance` `balance` DECIMAL(10, 2) NOT NULL DEFAULT '0';  -->
     <div class="container"> 
       <div class="row"> 
           <?php
