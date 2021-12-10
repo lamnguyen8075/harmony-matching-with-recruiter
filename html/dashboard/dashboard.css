@@ -70,6 +70,20 @@ label {
     margin-bottom: 25px;
 }
 
+#deleteAppBtn {
+    display: inline-block;
+    margin: 25px;
+}
+
+#submitAppBtn {
+    display: inline-block;
+    margin: 25px;
+}
+
+#edit-buttons {
+    text-align: center;
+}
+
 #logout-btn {
     float: right;
 }

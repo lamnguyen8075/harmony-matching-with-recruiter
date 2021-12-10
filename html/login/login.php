@@ -1,21 +1,7 @@
 <?php
     session_start();
 ?>
-<html>  
-    <header>    
-        <link rel="stylesheet" href="login.css">
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        <title>Login/Registration</title>  
-    </header>  
-    <body class= "background-color"> 
-        <div class="grid-container">
-            <div class="login-half">
-                <div class= "center"> 
-                    <h1 className = "bank-name">Login to your Harmony Account</h1>
-                    <!-- <img src="SJSUlogo.jpg" width="110px" height="auto"/> -->
-                </div>  
-                <div class="title">
-                    <h3>Login Here</h3> 
+
                     <?php
                         $logged_in = false;  
                         if (isset($_POST["email"]) && isset($_POST["password"])) {    
@@ -44,11 +30,17 @@
                                         if ($row["password"] === $password && $row["email"] === $email) {          
                                             $logged_in = true;  
                                             $_SESSION['email'] = $email;
-                                            header('Location: ../dashboard/dashboard.php');      
+
+                                            if($row["role"] == "student") {
+                                                header('Location: ../dashboard/dashboard.php');      
+                                            } else {
+                                                header('Location: ../dashboard/recruiterDashboard.php');      
+                                            }
                                         } else {          
-                                            echo '<div class="alert alert-danger">
-                                                <strong>Failed!</strong> Password or email is incorrect. Please try again!
-                                            </div>';        
+                                            echo '<script language="javascript">';
+                                            echo 'alert("Password incorrect");';
+                                            echo 'window.location = "../registration-signin.html";';
+                                            echo '</script>';      
                                         } 
                                     } else {
                                         echo '<div class="alert alert-danger">
@@ -70,28 +62,4 @@
                             }  
                         }
                     ?>  
-                </div>   
-         
-                <form action="login.php" method="post">   
-                    <div class ="inputGroup">
-                        <label for="email">Email: </label>
-                        <input type = "email" placeholder=" Enter your email" name = "email" label = "email" required> 
-                    </div>
-                    <div class="inputGroup">
-                        <label for="password">Password: </label>
-                        <input type = "password" placeholder =" Enter your password" name = "password" required>
-                    </div>
-                    <div class='btnPadding'>
-                        <input class="btnLogin" type = "submit" value = "Login">  
-                    </div>  
-                </form>
-        
-                <div class = "center">
-                    <h4>Don't have an account? Register Below!</h4>
-                    <button class="btn"><a href="registration.php">Register Here</a></button>   
-                </div>
-
-            </div>  
-        </div>
-    </body> 
-</html>
+          

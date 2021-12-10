@@ -13,24 +13,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="dashboard.css">
-    <title>Dashboard</title>
+    <title>Recruiter Dashboard</title>
 
   </head>
   <body>
-    <nav class="navbar navbar-expand navbar-dark bg-blue">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="marketplace.php">Job Marketplace</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#addApplicationModal">Add Job Posting</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#addApplicationModal">Add Application</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#editApplicationModal">Edit Application</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#editApplicationModal">Edit Job Posting</a>
           </li>
         </ul>
         <!-- <button type="button" class="btn btn-danger" action="logout.php">Logout</button> -->
@@ -59,21 +56,21 @@
     ?> 
 
     <!-- Displays cards contained with all of the user's job applications-->
-    <?php include 'applicationCards.php'; ?>
+    <?php include 'jobPostingCards.php'; ?>
 
     <!-- Modal for Add Account-->
     <div class="modal fade" id="addApplicationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Application</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Add Job Posting</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
     
           <!-- Forms -->
-          <form action="addApplication.php" method="post">
+          <form action="addJobPosting.php" method="post">
             <div class="inputBox">
               <label class="inputLabel">Role</label>
               <input type="text" class="form-control" name="role" aria-describedby="emailHelp" placeholder="Sofware Engineer, Front-end Engineer, etc." required>
@@ -86,12 +83,8 @@
             <div class="inputBox"> 
               <label id='accountType' class="my-1 mr-2" for="inlineFormCustomSelectPref">Status</label>
                 <select name="status" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
-                  <option value="Applied">Applied</option>
-                  <option value="Review">Review</option>
-                  <option value="Interview">Interview</option>
-                  <option value="Offer">Offer</option>
-                  <option value="Rejected">Rejected</option>
-                  <option value="Withdraw">Withdraw</option>
+                  <option value="Open">Open</option>
+                  <option value="Closed">Closed</option>
               </select>
             </div>
             <div class="inputBox">
@@ -120,15 +113,15 @@
           </div>
     
           <!-- Forms -->
-        <form action="editApplication.php" method="post">
+        <form action="editPosting.php" method="post">
         <!-- Dropdown for user's tracked applications -->
 
             <div class="inputBox">
-                <label for="application">Select the Application You Want to Edit</label><br>
+                <label for="application">Select the Job Posting You Want to Edit</label><br>
                 <select id="application_id" name="application_id" label="application_id" required>
                 <?php 
                     $conn = mysqli_connect("localhost", "root", "", "harmony");
-                    $query = "SELECT * FROM applications WHERE email = \"" . $_SESSION['email'] . "\"";
+                    $query = "SELECT * FROM job_postings WHERE email = \"" . $_SESSION['email'] . "\"";
                     $query_run = mysqli_query($conn, $query);
         
                     if(mysqli_num_rows($query_run) > 0)
@@ -145,7 +138,7 @@
                     ?>
                     <font color="E60000">
                     <?php
-                        echo "<b>*** No Applications Found ***</b>";
+                        echo "<b>*** No Job Postings Found ***</b>";
                         ?>
                     </font>
                     <?php
@@ -157,18 +150,14 @@
             <div class="inputBox"> 
               <label id='accountType' class="my-1 mr-2" for="inlineFormCustomSelectPref">Status</label>
                 <select name="status" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
-                  <option value="Applied">Applied</option>
-                  <option value="Review">Review</option>
-                  <option value="Interview">Interview</option>
-                  <option value="Offer">Offer</option>
-                  <option value="Rejected">Rejected</option>
-                  <option value="Withdraw">Withdraw</option>
+                  <option value="Open">Open</option>
+                  <option value="Closed">Closed</option>
               </select>
             </div>
 
             <div id="edit-buttons">
               <button type="submit" id="submitAppBtn" class="btn btn-primary" name="submit">Submit</button>
-              <button type="submit" id="deleteAppBtn" class="btn btn-danger" formaction="deleteApplication.php" formmethod="POST">Delete</button>
+              <button type="submit" id="deleteAppBtn" class="btn btn-danger" formaction="deletePosting.php" formmethod="POST">Delete</button>
             </div>
 
         </form>
