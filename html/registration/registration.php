@@ -40,7 +40,7 @@
                         echo "<script>
                             alert('SUCCESS! Your account has been successfully created.');
                         </script>";
-                        echo '<script>window.location.href="success.html";</script>';
+                        echo '<script>window.location.href="../registration-signin.html";</script>';
                     } else {  
                         echo '<div class = "failure">Failed to Register. Please enter a different username.</div>';
                     }
