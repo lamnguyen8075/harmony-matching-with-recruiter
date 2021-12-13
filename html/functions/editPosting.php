@@ -24,7 +24,7 @@
             $sql = "UPDATE job_postings SET status='$status' WHERE application_id='$application_id'";
             $results = mysqli_query($conn, $sql);
             echo "<script>
-                alert('You have successfully edited your application');
+                alert('You have successfully edited your job posting');
                 window.location.href='../dashboard/recruiterDashboard.php';
                 </script>";
 

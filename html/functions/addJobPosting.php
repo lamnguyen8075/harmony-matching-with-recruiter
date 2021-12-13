@@ -40,7 +40,7 @@
                 $sql = "INSERT INTO job_postings (email, role, company, status, date_applied, job_link) VALUES ('$email', '$updatedRole', '$updatedCompany', '$status', '$updatedDate', '$updatedURL')";
                 $results = mysqli_query($conn, $sql);
                 echo "<script>
-                    alert('You have successfully saved an application');
+                    alert('You have successfully posted a job opening');
                     window.location.href='../dashboard/recruiterDashboard.php';
                     </script>";
             // } else {
