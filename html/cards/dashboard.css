@@ -93,6 +93,10 @@ label {
     padding-bottom: 30px;
 }
 
+#no-apps-notification {
+    text-align: center;
+}
+
 .card-link {
     color: inherit; 
     text-decoration: underline;

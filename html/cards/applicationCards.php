@@ -28,7 +28,7 @@
                 echo "<script>alert('$message');</script>";
             }
               
-            if($results)
+            if(mysqli_num_rows($results) != 0)
             {
               while($row = $results->fetch_assoc())
               {
@@ -68,7 +68,7 @@
               }
             } else {
               echo "
-                      <h1> NO applications </h1>
+                      <h1 id='no-apps-notification'> No applications yet! </h1>
                    ";
             }
           ?>
