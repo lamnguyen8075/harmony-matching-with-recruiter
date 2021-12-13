@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>Track Application</title>
+  <link rel="stylesheet" href="../template/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sanchez&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <!-- NAVIGATION -->
+    <nav>
+      <h2 class="logo">
+        harmony.
+      </h2>
+      <div class="nav-links">
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">DASHBOARD</a></li>
+          <li><a href="">LOGOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  
+<body>
+  <!-- CONTENT -->  
+  <div class="content">
+    <div class="track-application-container">
+        <div class="title">Track Application</div>
+        <form action="#">
+            <div class="user-info">
+                <div class="input-box">
+                    <span class="info">Company</span>
+                    <input type="text" placeholder="Enter Company Name" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Position</span>
+                    <input type="text" placeholder="Enter Position" required>
+                </div>
+
+                
+                
+                <div class="input-box">
+                    <span class="info">Status</span>
+                    <select name="status">
+                        <option value="applied">Applied</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="accepted">Accepted</option>
+                    </select>
+                </div> 
+                
+               
+            </div>
+
+            
+            <div class="notes-box">
+              <span class="info">Notes</span>
+              <textarea rows = "5" cols = "60" name = "description" placeholder="Enter details here..."></textarea>
+            </div>
+            
+            <div class="button">
+                <input type="submit" value="Track">
+                <input type="submit" value="Cancel">
+            </div>
+        </form>
+        
+    </div>
+  </div>
+</body>
+
+<!-- FOOTER -->
+<footer>
+<h2>ABOUT US</h2>
+<ul>
+    <li>1 Washington Sq.</li>
+    <li>San Jose, CA 95112</li> 
+    <li>+1 408 924 1000</li>
+    <li>support@harmony.com</li>
+    
+</ul>
+</footer>
+  
+
+</html>
