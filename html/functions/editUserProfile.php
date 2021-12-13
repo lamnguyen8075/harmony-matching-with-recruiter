@@ -22,8 +22,9 @@
 
             $sql = "UPDATE student_db SET first_name ='$firstname', last_name = '$lastname', phone = '$phone' WHERE email='$email'";
             $results = mysqli_query($conn, $sql);
+            
             echo "<script>
-                alert('You have successfully edited your application');
+                alert('You have successfully edited your profile');
                 window.location.href='../dashboard/dashboard.php';
                 </script>";
 

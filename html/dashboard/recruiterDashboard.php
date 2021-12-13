@@ -92,7 +92,7 @@
             </div>
             <div class="inputBox">
               <label class="inputLabel">Date</label>
-              <input type="text" class="form-control" name="date_applied" aria-describedby="emailHelp" required>
+              <input type="date" class="form-control" name="date_applied" aria-describedby="emailHelp" required>
             </div>
             <div class="inputBox">
               <label class="inputLabel">Job Link</label>
@@ -190,7 +190,7 @@
             {
           ?>
           <!-- Forms -->
-          <form action="../functions/editUserProfile.php" method="post">
+          <form action="../functions/editRecruiterProfile.php" method="post">
             <div class="inputBox">
               <label class="inputLabel">First Name</label>
               <input type="text" class="form-control" name="fname" aria-describedby="emailHelp" placeholder=<?= $row['first_name']; ?> required>
